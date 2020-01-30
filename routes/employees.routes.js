@@ -5,7 +5,7 @@ const Employee = require('../models/employees.model');
 router.get('/employees', async (req, res) => {
 
   try {
-    res.json(await Employee.find());
+    res.json(await Employee.find().populate('department'));
   }
   catch(err) {
     res.status(500).json(err); 
