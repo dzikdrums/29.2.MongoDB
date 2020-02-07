@@ -6,8 +6,6 @@ const Department = require('../../../models/department.model');
 
 chai.use(chaiHttp);
 
-
-
 describe('GET /api/departments', () => {
 
   const expect = chai.expect;
